@@ -1,4 +1,3 @@
-import { act } from "react-dom/test-utils"
 import {createStore} from "redux"
 
 const INITAIL_VALUE = {
@@ -6,7 +5,6 @@ const INITAIL_VALUE = {
 }
 
 const counterReducer = (store = INITAIL_VALUE, action) => {
-    console.log("---1--", action)
     if (action.type === "INCREMENT") {
         return {counter: store.counter +1 }
     } else if (action.type === "DECREMENT") {
